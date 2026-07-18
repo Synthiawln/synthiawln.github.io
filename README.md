@@ -7,7 +7,7 @@ Dashboard visualisasi data anggaran dan realisasi anggaran tahun 2024–2025, di
 **Tools:** Microsoft Power BI, DAX, Power Query
 
 > ⚠️ **Catatan Kerahasiaan Data**
-> Data anggaran dan realisasi yang ditampilkan pada screenshot di bawah telah **disamarkan/dianonimkan** karena bersifat rahasia dan merupakan milik internal BPK Perwakilan DIY. File `.pbix` asli tidak dipublikasikan. Struktur visualisasi, jenis chart, dan metodologi analisis yang ditampilkan tetap merepresentasikan pekerjaan asli yang saya kerjakan selama magang.
+> Data anggaran dan realisasi yang ditampilkan pada screenshot di bawah telah **disamarkan/dianonimkan** karena bersifat rahasia dan merupakan milik internal BPK Perwakilan DIY. asli tidak dipublikasikan. Struktur visualisasi, jenis chart, dan metodologi analisis yang ditampilkan tetap merepresentasikan pekerjaan asli yang saya kerjakan selama magang.
 
 ---
 
@@ -16,8 +16,8 @@ Dashboard visualisasi data anggaran dan realisasi anggaran tahun 2024–2025, di
 <!-- Ganti baris di bawah ini dengan screenshot kamu yang sudah disamarkan -->
 <!-- Contoh: ![Dashboard Overview](images/dashboard-overview.png) -->
 
-![LRA 2024](images/LRA2024_dashboard1_blurred.png)
-![LRA Pilihan](images/LRA2024_dashboard2_blurred.png)
+![LRA 2024](images/LRA2024_dashboard1.png)
+![LRA Pilihan](images/LRA2024_dashboard2.png)
 
 ---
 
