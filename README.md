@@ -44,4 +44,4 @@ Melalui project ini saya belajar bagaimana menyusun dashboard yang tidak hanya i
 ---
 
 ## Kontak
-Synthia Wulandari — [Synthiawln@gmail.com](mailto:Synthiawln@gmail.com) · [LinkedIn](https://linkedin.com/in/synthia-wln)
+Synthia Wulandari — [Synthiawln@gmail.com](mailto:synthiawln@gmail.com) · [LinkedIn](https://www.linkedin.com/in/synthia-wulandari)
