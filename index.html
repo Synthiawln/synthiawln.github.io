@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synthia Wulandari — Junior Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233F;
+    --ink-soft:#2A3A5C;
+    --paper:#FAF8F3;
+    --paper-alt:#F1EDE2;
+    --amber:#E8A33D;
+    --teal:#2C7873;
+    --slate:#5B6472;
+    --line:#DDD6C4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,248,243,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;}
+  .nav-name{font-weight:600;font-size:15px;letter-spacing:.02em;}
+  .nav-links{display:flex;gap:28px;font-size:14px;color:var(--slate);}
+  .nav-links a:hover{color:var(--ink);}
+
+  /* ---------- HERO ---------- */
+  header.hero{padding:90px 0 70px;}
+  .eyebrow{
+    display:flex;align-items:center;gap:10px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--teal);margin-bottom:22px;
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);}
+  h1.title{font-size:52px;font-weight:700;line-height:1.08;letter-spacing:-0.02em;color:var(--ink);}
+  h1.title span{color:var(--teal);}
+  .role{font-size:19px;color:var(--slate);margin-top:14px;max-width:560px;}
+  .hero-bars{display:flex;align-items:flex-end;gap:6px;margin-top:34px;height:46px;}
+  .hero-bars i{display:block;width:9px;background:var(--amber);border-radius:2px 2px 0 0;opacity:.85;}
+  .contact-row{display:flex;flex-wrap:wrap;gap:18px;margin-top:36px;font-size:14px;color:var(--slate);}
+  .contact-row a{border-bottom:1px solid var(--line);padding-bottom:2px;transition:.2s;}
+  .contact-row a:hover{color:var(--teal);border-color:var(--teal);}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section{padding:64px 0;border-top:1px solid var(--line);}
+  .section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:36px;}
+  .section-head .tag{
+    font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--teal);
+    background:rgba(44,120,115,.08);padding:4px 9px;border-radius:4px;
+  }
+  .section-head h2{font-size:26px;color:var(--ink);letter-spacing:-0.01em;}
+
+  /* ---------- ABOUT ---------- */
+  .about-text{font-size:16px;color:var(--ink-soft);max-width:680px;}
+  .edu-card{
+    margin-top:28px;padding:20px 22px;background:var(--paper-alt);
+    border-left:3px solid var(--amber);border-radius:6px;
+  }
+  .edu-card .school{font-weight:600;font-size:15px;}
+  .edu-card .meta{font-size:13.5px;color:var(--slate);margin-top:4px;font-family:'JetBrains Mono',monospace;}
+
+  /* ---------- EXPERIENCE TIMELINE ---------- */
+  .timeline{position:relative;padding-left:26px;}
+  .timeline::before{
+    content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--line);
+  }
+  .t-item{position:relative;padding-bottom:38px;}
+  .t-item:last-child{padding-bottom:0;}
+  .t-item::before{
+    content:"";position:absolute;left:-26px;top:5px;width:11px;height:11px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--teal);
+  }
+  .t-item .period{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--teal);letter-spacing:.03em;}
+  .t-item h3{font-size:17px;margin-top:6px;color:var(--ink);}
+  .t-item .org{font-size:14px;color:var(--slate);margin-top:2px;}
+  .t-item ul{margin:12px 0 0 18px;font-size:14.5px;color:var(--ink-soft);}
+  .t-item li{margin-bottom:5px;}
+
+  /* ---------- PROJECTS ---------- */
+  .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .proj-card{
+    background:var(--paper-alt);border:1px solid var(--line);border-radius:10px;
+    padding:22px;display:flex;flex-direction:column;gap:12px;transition:.2s;
+  }
+  .proj-card:hover{border-color:var(--teal);transform:translateY(-2px);}
+  .proj-card .p-org{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--amber);text-transform:uppercase;letter-spacing:.06em;}
+  .proj-card h3{font-size:16.5px;color:var(--ink);}
+  .proj-card p{font-size:13.8px;color:var(--slate);flex-grow:1;}
+  .proj-card .p-link{
+    font-size:13px;color:var(--teal);display:flex;align-items:center;gap:6px;margin-top:4px;
+  }
+  .proj-card.full{grid-column:1 / -1;}
+
+  /* ---------- SKILLS ---------- */
+  .skill-group{margin-bottom:22px;}
+  .skill-group h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);margin-bottom:12px;font-family:'JetBrains Mono',monospace;}
+  .pill-row{display:flex;flex-wrap:wrap;gap:9px;}
+  .pill{
+    padding:7px 13px;border:1px solid var(--line);border-radius:20px;
+    font-size:13.5px;color:var(--ink-soft);background:var(--paper);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--line);padding:44px 0 60px;}
+  footer h2{font-size:24px;margin-bottom:10px;}
+  footer p{color:var(--slate);font-size:14.5px;max-width:480px;}
+  .foot-links{display:flex;gap:22px;margin-top:22px;font-size:14px;}
+  .foot-links a{border-bottom:1px solid var(--line);padding-bottom:2px;}
+  .foot-links a:hover{color:var(--teal);border-color:var(--teal);}
+  .foot-bottom{margin-top:50px;font-size:12.5px;color:var(--slate);font-family:'JetBrains Mono',monospace;}
+
+  @media (max-width:640px){
+    h1.title{font-size:36px;}
+    .proj-grid{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-name mono">SW</div>
+    <div class="nav-links">
+      <a href="#about">Tentang</a>
+      <a href="#experience">Pengalaman</a>
+      <a href="#projects">Proyek</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#contact">Kontak</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Tersedia untuk peluang penuh waktu</div>
+    <h1 class="title">Synthia Wulandari.<br><span>Junior Data Analyst</span></h1>
+    <p class="role">Mahasiswa Informatika Universitas Ahmad Dahlan yang terbiasa mengubah data mentah menjadi dashboard dan aplikasi web yang dipakai sungguhan — dari instansi pemerintah hingga sekolah.</p>
+    <div class="hero-bars" aria-hidden="true">
+      <i style="height:38%"></i><i style="height:60%"></i><i style="height:45%"></i>
+      <i style="height:85%;background:var(--teal);"></i><i style="height:55%"></i>
+      <i style="height:70%"></i><i style="height:30%"></i><i style="height:95%;background:var(--teal);"></i>
+    </div>
+    <div class="contact-row">
+      <a href="mailto:Synthiawln@gmail.com">Synthiawln@gmail.com</a>
+      <a href="tel:+6282155291371">+62 821 5529 1371</a>
+      <a href="https://linkedin.com/in/synthia-wln" target="_blank">linkedin.com/Synthia Wln</a>
+      <a href="https://github.com/GANTI-username-github" target="_blank">github.com/ganti-username</a>
+      <span>Yogyakarta, Indonesia</span>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head"><span class="tag">01</span><h2>Tentang</h2></div>
+    <p class="about-text">Aktif dan siap lulus 30 Juni 2026 dengan IPK 3,68. Punya pengalaman langsung sebagai data analyst dan asisten praktikum, terbiasa bekerja dengan data, membangun aplikasi web sederhana, dan berkolaborasi dalam tim lintas fungsi — mulai dari mentor bootcamp hingga staf instansi pemerintah.</p>
+    <div class="edu-card">
+      <div class="school">Universitas Ahmad Dahlan — S1 Informatika</div>
+      <div class="meta">IPK 3,68 &nbsp;·&nbsp; Agustus 2022 – Juni 2026 &nbsp;·&nbsp; Yogyakarta</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="wrap">
+    <div class="section-head"><span class="tag">02</span><h2>Pengalaman</h2></div>
+    <div class="timeline">
+
+      <div class="t-item">
+        <div class="period">JAN 2026 — JUL 2026</div>
+        <h3>Class Administrator, Bootcamp Video Editor</h3>
+        <div class="org">Hari Senin.com · Remote</div>
+        <ul>
+          <li>Mengelola administrasi kelas dan jadwal kegiatan bootcamp.</li>
+          <li>Memantau progres peserta dan memastikan kelancaran pembelajaran.</li>
+          <li>Menjadi penghubung antara mentor, peserta, dan tim penyelenggara.</li>
+          <li>Menangani dokumentasi dan pelaporan hasil kegiatan kelas.</li>
+        </ul>
+      </div>
+
+      <div class="t-item">
+        <div class="period">OKT 2025 — DES 2025</div>
+        <h3>Data Visualisasi / Data Analyst Support</h3>
+        <div class="org">BPK Perwakilan DIY · Yogyakarta</div>
+        <ul>
+          <li>Mengolah, entri, dan mengelola data untuk kebutuhan operasional instansi.</li>
+          <li>Membuat visualisasi data sebagai bahan analisis dan pelaporan internal.</li>
+          <li>Mengembangkan aplikasi web peminjaman ruangan dan kendaraan.</li>
+          <li>Membantu staf IT dalam pengelolaan sistem dan kebutuhan teknis harian.</li>
+        </ul>
+      </div>
+
+      <div class="t-item">
+        <div class="period">AGU 2024 — FEB 2025</div>
+        <h3>Asisten Praktikum Struktur Data</h3>
+        <div class="org">Universitas Ahmad Dahlan · Yogyakarta</div>
+        <ul>
+          <li>Menyampaikan materi eksekusi program dan pengelolaan data.</li>
+          <li>Memberikan soal serta merekap nilai praktikan semester 3.</li>
+          <li>Membimbing praktikan dalam penyelesaian tugas studi kasus.</li>
+        </ul>
+      </div>
+
+      <div class="t-item">
+        <div class="period">FEB 2024 — AGU 2024</div>
+        <h3>Asisten Praktikum Algoritma Pemrograman</h3>
+        <div class="org">Universitas Ahmad Dahlan · Yogyakarta</div>
+        <ul>
+          <li>Menyampaikan materi semester 2 serta menilai hasil pretest.</li>
+          <li>Merekap skor siswa dan menentukan algoritma program pendukung.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="section-head"><span class="tag">03</span><h2>Proyek</h2></div>
+    <div class="proj-grid">
+
+      <div class="proj-card full">
+        <div class="p-org">BPK Perwakilan DIY</div>
+        <h3>Dashboard Anggaran Tahunan</h3>
+        <p>Merancang dashboard visualisasi anggaran dan realisasi anggaran tahun 2024–2025 sebagai bahan analisis dan pengambilan keputusan internal instansi.</p>
+        <a class="p-link" href="#" target="_blank">Lihat kode &amp; dokumentasi di GitHub →</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="p-org">Tugas Kelompok — MPTI</div>
+        <h3>Sistem Informasi Persuratan Sekolah</h3>
+        <p>Aplikasi web pengelolaan surat masuk dan keluar atas permintaan dinas terkait, digunakan secara internal oleh sekolah.</p>
+        <a class="p-link" href="#" target="_blank">Lihat kode →</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="p-org">BPK Perwakilan DIY</div>
+        <h3>Aplikasi Peminjaman Barang &amp; Ruangan</h3>
+        <p>Aplikasi peminjaman kendaraan dan ruangan dengan pencatatan otomatis tanggal peminjaman dan pengembalian.</p>
+        <a class="p-link" href="#" target="_blank">Lihat kode →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="wrap">
+    <div class="section-head"><span class="tag">04</span><h2>Keahlian</h2></div>
+
+    <div class="skill-group">
+      <h4>Technical</h4>
+      <div class="pill-row">
+        <span class="pill">Microsoft Excel</span>
+        <span class="pill">Power BI</span>
+        <span class="pill">Tableau</span>
+        <span class="pill">Database Management</span>
+        <span class="pill">Data Entry &amp; Processing</span>
+        <span class="pill">Web Development (basic)</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Soft Skills</h4>
+      <div class="pill-row">
+        <span class="pill">Komunikasi</span>
+        <span class="pill">Kerja Tim</span>
+        <span class="pill">Manajemen Waktu</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Mari terhubung.</h2>
+    <p>Terbuka untuk peluang Junior Data Analyst maupun peran terkait data dan pengembangan web. Silakan hubungi lewat email atau LinkedIn.</p>
+    <div class="foot-links">
+      <a href="mailto:Synthiawln@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/synthia-wln" target="_blank">LinkedIn</a>
+      <a href="https://github.com/GANTI-username-github" target="_blank">GitHub</a>
+    </div>
+    <div class="foot-bottom">© 2026 Synthia Wulandari — dibangun &amp; di-hosting dengan GitHub Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>
