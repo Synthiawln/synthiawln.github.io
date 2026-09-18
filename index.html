@@ -119,10 +119,16 @@
   .p-preview .p-body{position:absolute;inset:22px 0 0 0;padding:14px 16px;}
 
   /* --- real screenshot preview --- */
-  .p-preview.shot .p-body{inset:22px 0 0 0;padding:0;overflow:hidden;background:#fff;}
+  .p-preview.shot .p-body{position:relative;inset:22px 0 0 0;padding:0;overflow:hidden;background:#fff;}
   .p-preview.shot img{
     width:100%;height:100%;object-fit:cover;object-position:top center;
     display:block;
+  }
+  .p-preview.shot .p-body span{
+    position:absolute;bottom:0;left:0;right:0;
+    font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.02em;
+    background:rgba(22,35,63,.78);color:var(--paper);
+    padding:5px 10px;text-align:center;z-index:2;
   }
   .p-preview .p-badge{
     position:absolute;top:28px;right:8px;z-index:2;
@@ -182,6 +188,7 @@
   .proj-card .p-link{
     font-size:13px;color:var(--teal);display:flex;align-items:center;gap:6px;margin-top:4px;
   }
+  .p-links-row{display:flex;flex-direction:column;gap:4px;}
 
   /* ---------- SKILLS ---------- */
   .skill-group{margin-bottom:22px;}
@@ -339,7 +346,7 @@
           <div class="p-chrome"><i></i><i></i><i></i></div>
           <div class="p-body">
             <img src="images/project visdat.png" alt="Dashboard Tableau — Operasional Pengiriman Air 2024: total pemasukan, pengeluaran, frekuensi kerja sopir, penggunaan armada, dan sebaran lokasi order">
-           <span>Dashboard Operasional</span>
+            <span>Dashboard Operasional</span>
           </div>
         </div>
         <div class="proj-info">
@@ -349,7 +356,7 @@
           <a class="p-link" href="https://github.com/Synthiawln/Proyek-Visdat.git" target="_blank">Lihat dokumentasi &amp; tampilan →</a>
         </div>
       </div>
-      
+
       <div class="proj-card full">
         <div class="p-preview dual">
           <div class="p-chrome"><i></i><i></i><i></i></div>
@@ -368,7 +375,7 @@
           <div class="p-org">Proyek Pembuatan Website — MPTI</div>
           <h3>Sistem Informasi Persuratan Sekolah</h3>
           <p>Aplikasi web pengelolaan surat masuk dan keluar atas permintaan dinas terkait, digunakan secara internal oleh sekolah.</p>
-          <a class="p-link" href="https://github.com/synthiawln/Sistem-Persuratan" target="_blank">Lihat dokumentasi & tampilan→</a>
+          <a class="p-link" href="https://github.com/synthiawln/Sistem-Persuratan" target="_blank">Lihat dokumentasi &amp; tampilan→</a>
         </div>
       </div>
 
@@ -390,7 +397,7 @@
           <div class="p-org">BPK Perwakilan DIY</div>
           <h3>Aplikasi Peminjaman Barang &amp; Ruangan</h3>
           <p>Aplikasi peminjaman kendaraan dan ruangan dengan pencatatan otomatis tanggal peminjaman dan pengembalian.</p>
-          <a class="p-link" href="https://github.com/Synthiawln/Aplikasi-PeminjamanBPK" target="_blank">Lihat dokumentasi & tampilan→</a>
+          <a class="p-link" href="https://github.com/Synthiawln/Aplikasi-PeminjamanBPK" target="_blank">Lihat dokumentasi &amp; tampilan→</a>
         </div>
       </div>
 
